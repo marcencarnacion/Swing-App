@@ -1,3 +1,6 @@
+//Marc Encarncion
+//Swing App
+//1/29/20
 import javax.swing.*;
 import java.awt.event.*; //this enables the events
 import java.awt.*;
@@ -6,6 +9,7 @@ public class Main
 {
   public static void main (String args[])
   {
+    System.out.println("Marc Encarnacion, Swing App");
     JFrame frame1 = new JFrame("The Magic Advice Giver");
     frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame1.setSize(500,500);
@@ -25,6 +29,7 @@ public class Main
     {
       public void actionPerformed(ActionEvent e)
       {
+        //Array list
         String[] phrases = {"You are amazing", "Do not let anyone get you down", "Believe in yourself", "You can do it"};
         String newText = phrases[(int)(Math.random() * phrases.length)];
         label1.setText(newText);
