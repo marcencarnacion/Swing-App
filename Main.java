@@ -4,6 +4,7 @@
 import javax.swing.*;
 import java.awt.event.*; //this enables the events
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Main
 {
@@ -20,6 +21,7 @@ public class Main
 
     //Label 1
     JLabel label1 = new JLabel("Chase your dreams");
+    JLabel label2 = new JLabel("You got it!");
     JTextField textfield1 = new JTextField(10);
 
     //Button 1 
@@ -30,11 +32,16 @@ public class Main
       public void actionPerformed(ActionEvent e)
       {
         //Array list
+        ArrayList<String> quotes = new ArrayList<String>();
+        quotes.add("You are amazing");
+        quotes.add("Do not let anyone get you down");
+        quotes.add("Believe in yourself");
+        quotes.add("You can do it");
         String[] phrases = {"You are amazing", "Do not let anyone get you down", "Believe in yourself", "You can do it"};
         String newText = phrases[(int)(Math.random() * phrases.length)];
         label1.setText(newText);
-      }
-    });
+      }//end the block of the button
+    });//end ActionListener
 
     //Button 2
     JButton button2 = new JButton("More advice?");
@@ -43,23 +50,21 @@ public class Main
       public void actionPerformed(ActionEvent e)
       {
         System.out.println("You are worth it!");
-      }
-    });
+      }//end the block of the button
+    });//end ActionListener
 
     panel1.add(button1);
     panel1.add(button2);
     panel1.add(label1);
     panel1.add(textfield1);
-
-
+    
       //-----------------Panel 2-----------------
       JPanel panel2 = new JPanel (new BorderLayout(10,10));
-
     
-      //--------------Image 1 - the DUCK-------------
-      ImageIcon duckImg = new ImageIcon("dogicon.jpg", "A little duck in water");
-      JLabel duckLabelPic = new JLabel(duckImg);
-      panel2.add(duckLabelPic);
+      //--------------Image 1 - the Dog-------------
+      ImageIcon dogImg = new ImageIcon("dogicon.jpg", "This is the emotional support dog");
+      JLabel dogLabelPic = new JLabel(dogImg);
+      panel2.add(dogLabelPic);
 
       frame1.getContentPane().add(BorderLayout.NORTH, panel1);
       frame1.getContentPane().add(BorderLayout.CENTER, panel2);
