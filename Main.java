@@ -57,7 +57,7 @@ public class Main
 
     
       //--------------Image 1 - the DUCK-------------
-      ImageIcon duckImg = new ImageIcon("doggoicon.jpg", "A little duck in water");
+      ImageIcon duckImg = new ImageIcon("dogicon.jpg", "A little duck in water");
       JLabel duckLabelPic = new JLabel(duckImg);
       panel2.add(duckLabelPic);
 
